@@ -68,17 +68,12 @@ class Division implements Operation {
 
 class OperationFactory {
     public Operation createOperation(char operator) {
-        switch (operator) {
-            case '+':
-                return new Addition();
-            case '-':
-                return new Subtraction();
-            case '*':
-                return new Multiplication();
-            case '/':
-                return new Division();
-            default:
-                return null;
-        }
+        return switch (operator) {
+            case '+' -> new Addition();
+            case '-' -> new Subtraction();
+            case '*' -> new Multiplication();
+            case '/' -> new Division();
+            default -> null;
+        };
     }
 }
