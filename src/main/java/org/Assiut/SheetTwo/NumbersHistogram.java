@@ -13,5 +13,6 @@ public class NumbersHistogram {
             }
             System.out.println();
         }
+        in.close();
     }
 }
